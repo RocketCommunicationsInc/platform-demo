@@ -1,0 +1,206 @@
+.icons {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+main {
+  display: flex;
+  height: calc(100vh - var(--spacing-24));
+
+  & aside {
+    width: 22.5rem;
+    background: var(--color-background-surface-default);
+    overflow-y: auto;
+    border: 1px solid #000;
+    position: relative;
+    transition: 0.2s linear;
+    overflow-x: hidden;
+
+    & :where(.nav-text, .text, .nav-header > rux-icon) {
+      white-space: nowrap;
+      transition: 0.2s linear;
+    }
+  }
+
+  & .content {
+    flex-grow: 1;
+    overflow: hidden;
+    padding: var(--spacing-6);
+  }
+}
+
+.nav-header {
+  font-family: var(--font-heading-2-font-family);
+  font-size: var(--font-heading-2-font-size);
+  font-weight: var(--font-heading-2-font-weight);
+  line-height: var(--font-heading-2-line-height);
+  letter-spacing: var(--font-heading-2-letter-spacing);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-2) var(--spacing-3);
+  background-color: var(--color-background-base-header);
+
+  & rux-icon {
+    color: var(--color-text-primary);
+  }
+}
+
+nav {
+  padding: var(--spacing-4) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  color: var(--color-text-secondary);
+  padding-inline: var(--button-padding-x-medium);
+  padding-block: var(--button-padding-y-medium);
+  text-decoration: none;
+  font-family: var(--font-control-body-1-font-family);
+  font-size: var(--font-control-body-1-font-size);
+  font-weight: var(--font-control-body-1-font-weight);
+  line-height: var(--font-control-body-1-line-height);
+  letter-spacing: var(--font-control-body-1-letter-spacing);
+
+  &[target='_blank']::after {
+    content: '';
+    width: 20px;
+    min-width: 20px;
+    aspect-ratio: 1/1;
+    display: block;
+  }
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+    color: var(--color-text-primary);
+    background-color: var(--color-background-surface-hover);
+
+    &::after {
+      --svg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M5 18c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-5c0-.55.45-1 1-1s1 .45 1 1v6c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V5a2 2 0 0 1 2-2h6c.55 0 1 .45 1 1s-.45 1-1 1H6c-.55 0-1 .45-1 1v12ZM15 5c-.55 0-1-.45-1-1s.45-1 1-1h6v6c0 .55-.45 1-1 1s-1-.45-1-1V6.41l-9.13 9.13a.996.996 0 1 1-1.41-1.41L17.59 5H15Z"></path></svg>');
+      -webkit-mask: var(--svg);
+      mask: var(--svg);
+      mask-repeat: no-repeat;
+      background-color: var(--color-text-primary);
+    }
+  }
+}
+
+button.nav-button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/**Expand/Collapse**/
+.collapse-btn {
+  position: absolute;
+  right: 0;
+}
+
+aside.collapsed {
+  width: 3rem;
+  overflow-x: hidden;
+  .collapse-btn {
+    transform: rotate(180deg);
+  }
+
+  header > :not(.collapse-btn) {
+    opacity: 0;
+  }
+
+  .nav-button {
+    padding-inline: var(--spacing-2);
+    &::after {
+      display: none;
+    }
+  }
+
+  .nav-text {
+    opacity: 0;
+  }
+}
+
+.appLink {
+  display: flex;
+  position: relative;
+  margin: var(--spacing-0);
+  width: inherit;
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-base);
+  color: var(--color-background-interactive-default);
+  font-family: var(--font-control-body-1-font-family);
+  font-size: var(--font-control-body-1-font-size);
+  font-weight: var(--font-control-body-1-font-weight);
+  line-height: var(--font-control-body-1-line-height);
+  letter-spacing: var(--font-control-body-1-letter-spacing);
+  border: 1px solid var(--color-background-interactive-default);
+  justify-content: center;
+  align-items: center;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+    color: var(--color-background-interactive-hover);
+    border-color: var(--color-background-interactive-hover);
+  }
+}
+
+#home-content:not([hidden]) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  padding: 2rem;
+  background: var(--color-background-surface-default);
+  border-radius: 6px;
+  width: 113.75rem; /*300px x 5(cards) + 4 x 4rem(gap) + 4rem(padding)*/
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-inline: auto;
+}
+
+.service-card {
+  width: 300px;
+  box-sizing: border-box;
+
+  & header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    & rux-icon {
+      color: var(--color-text-primary);
+    }
+
+    h3 {
+      font-size: inherit;
+      font-weight: inherit;
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  &::part(body) {
+    text-align: center;
+    color: var(--color-text-secondary);
+  }
+
+  p {
+    margin: 0;
+  }
+
+  & .appLink {
+    border-width: 0;
+  }
+}

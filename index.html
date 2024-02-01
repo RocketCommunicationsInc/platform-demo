@@ -1,0 +1,96 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Astro</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@astrouxds/astro-web-components/dist/astro-web-components/astro-web-components.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@astrouxds/astro-web-components/dist/astro-web-components/astro-web-components.esm.js"></script>
+    <link rel="stylesheet" href="/css/style-changes.css" />
+  </head>
+
+  <body>
+    <rux-global-status-bar app-domain="ACME" app-name="PLATFORM" menu-icon="apps">
+      <rux-clock></rux-clock>
+      <div class="icons" slot="right-side">
+        <!-- <rux-monitoring-icon icon="notifications" label="AWEs" status="standby" sublabel="" size="2.5rem" notifications="3"></rux-monitoring-icon> -->
+      </div>
+    </rux-global-status-bar>
+    <main>
+      <!--Menu html would go here-->
+      <section class="content">
+        <article id="home-content">
+          <rux-card class="service-card"
+            ><header slot="header">
+              <rux-icon icon="fullscreen" size="80px" class="card-icon"></rux-icon>
+              <h3>TT&C Monitor</h3>
+            </header>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
+            </div>
+            <footer slot="footer"><a href="https://monitor-ttc.netlify.app" target="_blank" class="appLink">Open App</a></footer>
+          </rux-card>
+
+          <rux-card class="service-card"
+            ><header slot="header">
+              <rux-icon icon="fullscreen" size="80px" class="card-icon"></rux-icon>
+              <h3>TT&C Command</h3>
+            </header>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
+            </div>
+            <footer slot="footer"><a href="https://ttc-command-react.netlify.app/" target="_blank" class="appLink">Open App</a></footer>
+          </rux-card>
+
+          <rux-card class="service-card"
+            ><header slot="header">
+              <rux-icon icon="fullscreen" size="80px" class="card-icon"></rux-icon>
+              <h3>GRM Dashboard</h3>
+            </header>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
+            </div>
+            <footer slot="footer"><a href="https://grm-dashboard-react.netlify.app/" target="_blank" class="appLink">Open App</a></footer>
+          </rux-card>
+
+          <rux-card class="service-card"
+            ><header slot="header">
+              <rux-icon icon="fullscreen" size="80px" class="card-icon"></rux-icon>
+              <h3>GRM Equipment</h3>
+            </header>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
+            </div>
+            <footer slot="footer"><a href="https://grm-equipment-react-ts.netlify.app/" target="_blank" class="appLink">Open App</a></footer>
+          </rux-card>
+
+          <rux-card class="service-card"
+            ><header slot="header">
+              <rux-icon icon="fullscreen" size="80px" class="card-icon"></rux-icon>
+              <h3>GRM Schedule</h3>
+            </header>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
+            </div>
+            <footer slot="footer"><a href="https://grm-schedule-react.netlify.app/" target="_blank" class="appLink">Open App</a></footer>
+          </rux-card>
+
+          <rux-card class="service-card"
+            ><header slot="header">
+              <rux-icon icon="fullscreen" size="80px" class="card-icon"></rux-icon>
+              <h3>Flight Dynamics</h3>
+            </header>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
+            </div>
+            <footer slot="footer"><a href="https://flight-dynamics-service.netlify.app" target="_blank" class="appLink">Open App</a></footer>
+          </rux-card>
+        </article>
+        <iframe id="frame" name="internal-links" hidden></iframe>
+      </section>
+    </main>
+  </body>
+</html>
+<script src="/js/collapse.js"></script>
