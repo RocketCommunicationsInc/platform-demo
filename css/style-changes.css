@@ -183,6 +183,7 @@ aside.collapsed {
     gap: 10px;
     & rux-icon {
       color: var(--color-text-primary);
+      margin-block: var(--spacing-2);
     }
 
     h3 {
