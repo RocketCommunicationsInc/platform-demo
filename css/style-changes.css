@@ -161,12 +161,14 @@ aside.collapsed {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-content: flex-start;
   gap: 4rem;
   padding: 2rem;
   background: var(--color-background-surface-default);
   border-radius: 6px;
   width: 113.75rem; /*300px x 5(cards) + 4 x 4rem(gap) + 4rem(padding)*/
   max-width: 100%;
+  min-height: 100%;
   box-sizing: border-box;
   margin-inline: auto;
 }
