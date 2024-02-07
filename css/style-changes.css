@@ -150,7 +150,8 @@ aside.collapsed {
   align-items: center;
 
   &:hover,
-  &:active {
+  &:active,
+  &:focus-within {
     text-decoration: none;
     color: var(--color-background-interactive-hover);
     border-color: var(--color-background-interactive-hover);
@@ -219,7 +220,8 @@ aside.collapsed {
     content: '';
   }
 
-  .service-card:hover {
+  .service-card:hover,
+  .service-card:focus-within {
     & rux-icon {
       color: var(--color-border-interactive-hover);
     }

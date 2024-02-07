@@ -25,6 +25,8 @@ function windowHandler(e) {
       if (index > -1) openWindows.splice(index, 1);
       addEntry(target, href);
       console.log(openWindows);
+    } else {
+      window.focus();
     }
   } else {
     console.log("it doesn't");
