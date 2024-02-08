@@ -1,11 +1,184 @@
-var g=Object.defineProperty;var u=(o,t,n)=>t in o?g(o,t,{enumerable:!0,configurable:!0,writable:!0,value:n}):o[t]=n;var h=(o,t,n)=>(u(o,typeof t!="symbol"?t+"":t,n),n);(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))a(e);new MutationObserver(e=>{for(const i of e)if(i.type==="childList")for(const r of i.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&a(r)}).observe(document,{childList:!0,subtree:!0});function n(e){const i={};return e.integrity&&(i.integrity=e.integrity),e.referrerPolicy&&(i.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?i.credentials="include":e.crossOrigin==="anonymous"?i.credentials="omit":i.credentials="same-origin",i}function a(e){if(e.ep)return;e.ep=!0;const i=n(e);fetch(e.href,i)}})();const b=[{label:"Applications",items:[{label:"TT&C Monitor",icon:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',url:"https://monitor-ttc.netlify.app",target:"_blank"},{label:"TT&C Command",icon:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',url:"https://ttc-command-react.netlify.app/",target:"_blank"},{label:"GRM Dashboard",icon:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',url:"https://grm-dashboard-react.netlify.app/",target:"_blank"},{label:"GRM Equipment Manager",icon:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',url:"https://grm-equipment-react-ts.netlify.app/",target:"_blank"},{label:"GRM Schedule",icon:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',url:"https://grm-schedule-react.netlify.app/",target:"_blank"},{label:"Flight Dynamic Services",icon:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',url:"https://flight-dynamics-service.netlify.app",target:"_blank"},{label:"AstroUXDS",icon:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',url:"https://www.astrouxds.com",target:"_blank"}]},{label:"Utilities",items:[{label:"Alarms",icon:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',url:"https://www.google.com",target:"_blank",type:"a"},{label:"Crew Log",icon:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',url:"https://www.astrouxds.com",target:"_blank",type:"a"},{label:"Intel",icon:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',url:"https://www.google.com",target:"_blank",type:"a"},{label:"TLE Tool",icon:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',url:"https://www.astrouxds.com",type:"a"}]},{label:"System",items:[{label:"User Name",icon:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M16 8c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4ZM4 18c0-2.66 5.33-4 8-4s8 1.34 8 4v1c0 .55-.45 1-1 1H5c-.55 0-1-.45-1-1v-1Z"></path></svg>'},{label:"Settings",icon:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',url:"https://www.astrouxds.com",target:"_blank"},{label:"Log Out",icon:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',url:"https://www.astrouxds.com",type:"button",click:function(o){console.log("log out!",o)}}]}],s=document.createElement("div");s.classList.add("menu");b.map(o=>{const t=document.createElement("header");if(t.classList.add("nav-header"),o.icon&&o.icon.startsWith("<svg")){const n=document.createElement("i");n.classList.add("icon"),n.innerHTML=o.icon,t.appendChild(n)}t.innerHTML+=`<span class="text">${o.label}</span>`,s.appendChild(t),o.items.length>0&&Z(o)});function Z(o){console.log(o),o.items.map(t=>{const n=document.createElement(t.type==="button"?"button":"a");if(n.classList.add("nav-button"),t.click&&(n.onclick=t.click),t.target&&n instanceof HTMLAnchorElement&&(n.target=t.target),t.url&&n instanceof HTMLAnchorElement&&(n.href=t.url),t.icon&&t.icon.startsWith("<svg")){const a=document.createElement("i");a.classList.add("icon"),a.innerHTML=t.icon,n.appendChild(a)}n.innerHTML+=`<span class="nav-text">${t.label}</span>`,s.appendChild(n)})}const f=({domain:o,name:t,version:n,appState:a,username:e,appStateColor:i})=>{const r=document.createElement("div");r.classList.add("app-meta"),r.setAttribute("part","app-meta");const c=o?`<h1 class="app-domain">${o}</h1>`:null,p=t?`<h1 class="app-name">${t}</h1>`:null,d=n?`<span class="app-version">${n}</span>`:null;let v="";if(a||e){const m=e?`<div class="username" part="username">${e}</div>`:null;v=`<div class="app-state-wrapper">${a?`<div class="app-state ${i}" part="app-state">${a}</div>`:null}${m}</div>`}const l=`<div class="app-info-wrapper">${c}${p}${d}</div>${v}`;return console.log(l),r.innerHTML=l,r},w=`<header part="container">
+var u = Object.defineProperty;
+var b = (i, t, n) => (t in i ? u(i, t, { enumerable: !0, configurable: !0, writable: !0, value: n }) : (i[t] = n));
+var h = (i, t, n) => (b(i, typeof t != 'symbol' ? t + '' : t, n), n);
+(function () {
+  const t = document.createElement('link').relList;
+  if (t && t.supports && t.supports('modulepreload')) return;
+  for (const e of document.querySelectorAll('link[rel="modulepreload"]')) a(e);
+  new MutationObserver((e) => {
+    for (const o of e) if (o.type === 'childList') for (const r of o.addedNodes) r.tagName === 'LINK' && r.rel === 'modulepreload' && a(r);
+  }).observe(document, { childList: !0, subtree: !0 });
+  function n(e) {
+    const o = {};
+    return (
+      e.integrity && (o.integrity = e.integrity),
+      e.referrerPolicy && (o.referrerPolicy = e.referrerPolicy),
+      e.crossOrigin === 'use-credentials' ? (o.credentials = 'include') : e.crossOrigin === 'anonymous' ? (o.credentials = 'omit') : (o.credentials = 'same-origin'),
+      o
+    );
+  }
+  function a(e) {
+    if (e.ep) return;
+    e.ep = !0;
+    const o = n(e);
+    fetch(e.href, o);
+  }
+})();
+const Z = [
+    {
+      label: 'Applications',
+      items: [
+        {
+          label: 'TT&C Monitor',
+          icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',
+          url: 'https://monitor-ttc.netlify.app',
+          target: '_blank',
+        },
+        {
+          label: 'TT&C Command',
+          icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',
+          url: 'https://ttc-command-react.netlify.app/',
+          target: '_blank',
+        },
+        {
+          label: 'GRM Dashboard',
+          icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',
+          url: 'https://grm-dashboard-react.netlify.app/',
+          target: '_blank',
+        },
+        {
+          label: 'GRM Equipment Manager',
+          icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',
+          url: 'https://grm-equipment-react-ts.netlify.app/',
+          target: '_blank',
+        },
+        {
+          label: 'GRM Schedule',
+          icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',
+          url: 'https://grm-schedule-react.netlify.app/',
+          target: '_blank',
+        },
+        {
+          label: 'Flight Dynamic Services',
+          icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',
+          url: 'https://flight-dynamics-service.netlify.app',
+          target: '_blank',
+        },
+        {
+          label: 'AstroUXDS',
+          icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',
+          url: 'https://www.astrouxds.com',
+          target: '_blank',
+        },
+      ],
+    },
+    {
+      label: 'Utilities',
+      items: [
+        {
+          label: 'Alarms',
+          icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',
+          url: 'https://www.google.com',
+          target: '_blank',
+          type: 'a',
+        },
+        {
+          label: 'Crew Log',
+          icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',
+          url: 'https://www.astrouxds.com',
+          target: '_blank',
+          type: 'a',
+        },
+        {
+          label: 'Intel',
+          icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',
+          url: 'https://www.google.com',
+          target: '_blank',
+          type: 'a',
+        },
+        {
+          label: 'TLE Tool',
+          icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',
+          url: 'https://www.astrouxds.com',
+          type: 'a',
+        },
+      ],
+    },
+    {
+      label: 'System',
+      items: [
+        {
+          label: 'User Name',
+          icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M16 8c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4ZM4 18c0-2.66 5.33-4 8-4s8 1.34 8 4v1c0 .55-.45 1-1 1H5c-.55 0-1-.45-1-1v-1Z"></path></svg>',
+        },
+        {
+          label: 'Settings',
+          icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',
+          url: 'https://www.astrouxds.com',
+          target: '_blank',
+        },
+        {
+          label: 'Log Out',
+          icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7 5h2V3H7v2Zm0 8h2v-2H7v2Zm2 8H7v-2h2v2Zm2-4h2v-2h-2v2Zm2 4h-2v-2h2v2ZM3 21h2v-2H3v2Zm2-4H3v-2h2v2Zm-2-4h2v-2H3v2Zm2-4H3V7h2v2ZM3 5h2V3H3v2Zm10 8h-2v-2h2v2Zm6 4h2v-2h-2v2Zm2-4h-2v-2h2v2Zm-2 8h2v-2h-2v2Zm2-12h-2V7h2v2ZM11 9h2V7h-2v2Zm8-4V3h2v2h-2Zm-8 0h2V3h-2v2Zm6 16h-2v-2h2v2Zm-2-8h2v-2h-2v2Zm2-8h-2V3h2v2Z"/></svg>',
+          url: 'https://www.astrouxds.com',
+          type: 'button',
+          click: function (i) {
+            console.log('log out!', i);
+          },
+        },
+      ],
+    },
+  ],
+  v = document.createElement('div');
+v.classList.add('menu');
+Z.map((i) => {
+  const t = document.createElement('header');
+  if ((t.classList.add('nav-header'), i.icon && i.icon.startsWith('<svg'))) {
+    const n = document.createElement('i');
+    n.classList.add('icon'), (n.innerHTML = i.icon), t.appendChild(n);
+  }
+  (t.innerHTML += `<span class="text">${i.label}</span>`), v.appendChild(t), i.items.length > 0 && f(i);
+});
+function f(i) {
+  console.log(i),
+    i.items.map((t) => {
+      const n = document.createElement(t.type === 'button' ? 'button' : 'a');
+      if (
+        (n.classList.add('nav-button'),
+        t.click && (n.onclick = t.click),
+        t.target && n instanceof HTMLAnchorElement && (n.target = t.target),
+        t.url && n instanceof HTMLAnchorElement && (n.href = t.url),
+        t.icon && t.icon.startsWith('<svg'))
+      ) {
+        const a = document.createElement('i');
+        a.classList.add('icon'), (a.innerHTML = t.icon), n.appendChild(a);
+      }
+      (n.innerHTML += `<span class="nav-text">${t.label}</span>`), v.appendChild(n);
+    });
+}
+const w = ({ domain: i, name: t, version: n, appState: a, username: e, appStateColor: o, leftSide: r }) => {
+    a || e ? r.classList.add('addMargin') : r.classList.remove('addMargin');
+    const s = document.createElement('div');
+    s.classList.add('app-meta'), s.setAttribute('part', 'app-meta');
+    const d = i ? `<h1 class="app-domain">${i}</h1>` : null,
+      p = t ? `<h1 class="app-name">${t}</h1>` : null,
+      m = n ? `<span class="app-version">${n}</span>` : null;
+    let l = '';
+    if (a || e) {
+      const g = e ? `<div class="username" part="username">${e}</div>` : '';
+      l = `<div class="app-state-wrapper">${a ? `<div class="app-state ${o}" part="app-state">${a}</div>` : ''}${g}</div>`;
+    }
+    const c = `<div class="app-info-wrapper">${d}${p}${m}</div>${l}`;
+    return console.log(c), (s.innerHTML = c), s;
+  },
+  H = `<header part="container">
   <div class="left-side">
     <button class="menu-button">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path
           fill="currentColor"
           fill-rule="evenodd"
-          d="M4 8h4V4H4v4Zm6 12h4v-4h-4v4Zm-2 0H4v-4h4v4Zm-4-6h4v-4H4v4Zm10 0h-4v-4h4v4Zm2-10v4h4V4h-4Zm-2 4h-4V4h4v4Zm2 6h4v-4h-4v4Zm4 6h-4v-4h4v4Z"
+          d="M4 8c-.55 0-1-.45-1-1s.45-1 1-1h16c.55 0 1 .45 1 1s-.45 1-1 1H4Zm0 5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1Zm0 5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1Z"
         ></path>
       </svg>
     </button>
@@ -17,7 +190,8 @@ var g=Object.defineProperty;var u=(o,t,n)=>t in o?g(o,t,{enumerable:!0,configura
   </div>
   <slot name="right-side"></slot>
 </header>
-`,H=`:host {
+`,
+  k = `:host {
   display: block;
   position: sticky;
   z-index: 50;
@@ -209,7 +383,8 @@ slot[name='right-side'] > rux-monitoring-icon,
 .app-state.tag4 {
   background: var(--color-palette-hotorange-600);
 }
-`,x=`.menu-button {
+`,
+  x = `.menu-button {
   border: 0;
   line-height: 0;
   background: transparent;
@@ -233,6 +408,10 @@ slot[name='right-side'] > rux-monitoring-icon,
 }
 
 .left-side {
+  &.addMargin {
+    margin-block-end: 1.375rem;
+  }
+
   & .menu-container {
     position: absolute;
     padding: var(--spacing-0); /*no spacing, slotted content handles padding*/
@@ -405,5 +584,140 @@ slot[name='right-side'] > rux-monitoring-icon,
     width: 100%;
   }
 }
-`;//!!ToDo: better way to implement styles + astro tokens? (tokens are just added for testing for now)
-const k=H+x;class y extends HTMLElement{constructor(){var e,i;super();h(this,"popupButton");h(this,"popupContainer");h(this,"leftSideEl");h(this,"appState","");h(this,"appStateColor","tag1");h(this,"username","");h(this,"appDomain",null);h(this,"appName",null);h(this,"appVersion",null);h(this,"menuOpen",!1);h(this,"closeOnSelect",!1);h(this,"_assignedOutsideClickEvent",!1);this._onSlotChange=this._onSlotChange.bind(this),this._handleOpen=this._handleOpen.bind(this),this._handleTriggerClick=this._handleTriggerClick.bind(this),this._handleOutsideClick=this._handleOutsideClick.bind(this),this._handleMenuClick=this._handleMenuClick.bind(this),this._setMeta=this._setMeta.bind(this),this.emitOpenEvent=this.emitOpenEvent.bind(this),this.emitClosedEvent=this.emitClosedEvent.bind(this),this.show=this.show.bind(this),this.hide=this.hide.bind(this),this.attachShadow({mode:"open"});const n=document.createElement("template");n.innerHTML=w,(e=this.shadowRoot)==null||e.appendChild(n.content.cloneNode(!0));const a=document.createElement("style");a.innerHTML=k,(i=this.shadowRoot)==null||i.appendChild(a),this.popupButton=this.shadowRoot.querySelector(".menu-button"),this.popupContainer=this.shadowRoot.querySelector(".menu-container"),this.leftSideEl=this.shadowRoot.querySelector(".left-side"),this.popupContainer.appendChild(s),this.appState=this.getAttribute("app-state")||"",this.appStateColor=this.getAttribute("app-state-color")||"tag1",this.username=this.getAttribute("username")||"",this.appDomain=this.getAttribute("app-domain")||null,this.appName=this.getAttribute("app-name")||null,this.appVersion=this.getAttribute("app-version")||null,this.menuOpen=this.hasAttribute("menu-open"),this.closeOnSelect=this.hasAttribute("close-on-select")}static get observedAttributes(){return["app-state","app-state-color","app-domain","app-name","app-version","close-on-select","username"]}emitOpenEvent(n={}){const a=new CustomEvent("gsbmenuopened",{bubbles:!0,cancelable:!0,detail:n});this.dispatchEvent(a)}emitClosedEvent(n={}){const a=new CustomEvent("gsbmenuclosed",{bubbles:!0,cancelable:!0,detail:n});this.dispatchEvent(a)}async show(){return this.menuOpen||(this.menuOpen=!0),this._handleOpen(),this.menuOpen}async hide(){return this.menuOpen&&(this.menuOpen=!1),this._handleOpen(),this.menuOpen}_onSlotChange(){console.log("changed")}_handleOpen(){this.menuOpen?this.setAttribute("menu-open",""):this.removeAttribute("menu-open"),this.menuOpen?(this.emitOpenEvent(),this._assignedOutsideClickEvent||(window.addEventListener("mousedown",this._handleOutsideClick),this._assignedOutsideClickEvent=!0)):(this.emitClosedEvent(),this._assignedOutsideClickEvent&&(window.removeEventListener("mousedown",this._handleOutsideClick),this._assignedOutsideClickEvent=!1)),this.popupContainer.hidden=!this.menuOpen}_handleTriggerClick(){this.menuOpen=!this.menuOpen,this._handleOpen()}_handleMenuClick(n){const a=n.target,e=a.closest("button")!==null||a.closest("a")!==null;this.closeOnSelect&&e&&(this.menuOpen=!1,this._handleOpen())}_handleOutsideClick(n){n.composedPath().includes(this.popupContainer)||n.composedPath().includes(this.popupButton)||(this.menuOpen=!1,this._handleOpen())}_setMeta(){var e;const n=f({domain:this.appDomain,name:this.appName,version:this.appVersion,appState:this.appState,appStateColor:this.appStateColor,username:this.username}),a=(e=this.shadowRoot)==null?void 0:e.querySelector("div.app-meta");console.log(a),a?a.replaceWith(n):this.leftSideEl.insertAdjacentElement("afterend",n)}connectedCallback(){this.popupButton.addEventListener("click",this._handleTriggerClick),this.popupContainer.addEventListener("click",this._handleMenuClick),this.popupContainer.hidden=!this.menuOpen,this._setMeta()}disconnectedCallback(){this.popupButton.removeEventListener("click",this._handleTriggerClick),this.popupContainer.removeEventListener("click",this._handleMenuClick),this._assignedOutsideClickEvent&&window.removeEventListener("mousedown",this._handleOutsideClick)}attributeChangedCallback(n,a,e){switch(n){case"app-state":this.appState=e,this._setMeta();break;case"app-state-color":this.appStateColor=e,this._setMeta();break;case"app-domain":this.appDomain=e,this._setMeta();break;case"app-name":this.appName=e,this._setMeta();break;case"app-version":this.appVersion=e,this._setMeta();break;case"username":this.username=e,this._setMeta();break;case"close-on-select":this.closeOnSelect=this.hasAttribute("close-on-select");break}}}window.customElements.define("vanilla-gsb",y);
+`; //!!ToDo: better way to implement styles + astro tokens? (tokens are just added for testing for now)
+const y = k + x;
+class V extends HTMLElement {
+  constructor() {
+    var e, o;
+    super();
+    h(this, 'popupButton');
+    h(this, 'popupContainer');
+    h(this, 'leftSideEl');
+    h(this, 'appState', '');
+    h(this, 'appStateColor', 'tag1');
+    h(this, 'username', '');
+    h(this, 'appDomain', null);
+    h(this, 'appName', null);
+    h(this, 'appVersion', null);
+    h(this, 'menuOpen', !1);
+    h(this, 'closeOnSelect', !1);
+    h(this, '_assignedOutsideClickEvent', !1);
+    (this._onSlotChange = this._onSlotChange.bind(this)),
+      (this._handleOpen = this._handleOpen.bind(this)),
+      (this._handleTriggerClick = this._handleTriggerClick.bind(this)),
+      (this._handleOutsideClick = this._handleOutsideClick.bind(this)),
+      (this._handleMenuClick = this._handleMenuClick.bind(this)),
+      (this._setMeta = this._setMeta.bind(this)),
+      (this.emitOpenEvent = this.emitOpenEvent.bind(this)),
+      (this.emitClosedEvent = this.emitClosedEvent.bind(this)),
+      (this.show = this.show.bind(this)),
+      (this.hide = this.hide.bind(this)),
+      this.attachShadow({ mode: 'open' });
+    const n = document.createElement('template');
+    (n.innerHTML = H), (e = this.shadowRoot) == null || e.appendChild(n.content.cloneNode(!0));
+    const a = document.createElement('style');
+    (a.innerHTML = y),
+      (o = this.shadowRoot) == null || o.appendChild(a),
+      (this.popupButton = this.shadowRoot.querySelector('.menu-button')),
+      (this.popupContainer = this.shadowRoot.querySelector('.menu-container')),
+      (this.leftSideEl = this.shadowRoot.querySelector('.left-side')),
+      this.popupContainer.appendChild(v),
+      (this.appState = this.getAttribute('app-state') || ''),
+      (this.appStateColor = this.getAttribute('app-state-color') || 'tag1'),
+      (this.username = this.getAttribute('username') || ''),
+      (this.appDomain = this.getAttribute('app-domain') || null),
+      (this.appName = this.getAttribute('app-name') || null),
+      (this.appVersion = this.getAttribute('app-version') || null),
+      (this.menuOpen = this.hasAttribute('menu-open')),
+      (this.closeOnSelect = this.hasAttribute('close-on-select'));
+  }
+  static get observedAttributes() {
+    return ['app-state', 'app-state-color', 'app-domain', 'app-name', 'app-version', 'close-on-select', 'username'];
+  }
+  emitOpenEvent(n = {}) {
+    const a = new CustomEvent('gsbmenuopened', { bubbles: !0, cancelable: !0, detail: n });
+    this.dispatchEvent(a);
+  }
+  emitClosedEvent(n = {}) {
+    const a = new CustomEvent('gsbmenuclosed', { bubbles: !0, cancelable: !0, detail: n });
+    this.dispatchEvent(a);
+  }
+  async show() {
+    return this.menuOpen || (this.menuOpen = !0), this._handleOpen(), this.menuOpen;
+  }
+  async hide() {
+    return this.menuOpen && (this.menuOpen = !1), this._handleOpen(), this.menuOpen;
+  }
+  _onSlotChange() {
+    console.log('changed');
+  }
+  _handleOpen() {
+    this.menuOpen ? this.setAttribute('menu-open', '') : this.removeAttribute('menu-open'),
+      this.menuOpen
+        ? (this.emitOpenEvent(), this._assignedOutsideClickEvent || (window.addEventListener('mousedown', this._handleOutsideClick), (this._assignedOutsideClickEvent = !0)))
+        : (this.emitClosedEvent(), this._assignedOutsideClickEvent && (window.removeEventListener('mousedown', this._handleOutsideClick), (this._assignedOutsideClickEvent = !1))),
+      (this.popupContainer.hidden = !this.menuOpen);
+  }
+  _handleTriggerClick() {
+    (this.menuOpen = !this.menuOpen), this._handleOpen();
+  }
+  _handleMenuClick(n) {
+    const a = n.target,
+      e = a.closest('button') !== null || a.closest('a') !== null;
+    this.closeOnSelect && e && ((this.menuOpen = !1), this._handleOpen());
+  }
+  _handleOutsideClick(n) {
+    n.composedPath().includes(this.popupContainer) || n.composedPath().includes(this.popupButton) || ((this.menuOpen = !1), this._handleOpen());
+  }
+  _setMeta() {
+    var e;
+    const n = w({
+        domain: this.appDomain,
+        name: this.appName,
+        version: this.appVersion,
+        appState: this.appState,
+        appStateColor: this.appStateColor,
+        username: this.username,
+        leftSide: this.leftSideEl,
+      }),
+      a = (e = this.shadowRoot) == null ? void 0 : e.querySelector('div.app-meta');
+    console.log(a), a ? a.replaceWith(n) : this.leftSideEl.insertAdjacentElement('afterend', n);
+  }
+  connectedCallback() {
+    this.popupButton.addEventListener('click', this._handleTriggerClick),
+      this.popupContainer.addEventListener('click', this._handleMenuClick),
+      (this.popupContainer.hidden = !this.menuOpen),
+      this._setMeta();
+  }
+  disconnectedCallback() {
+    this.popupButton.removeEventListener('click', this._handleTriggerClick),
+      this.popupContainer.removeEventListener('click', this._handleMenuClick),
+      this._assignedOutsideClickEvent && window.removeEventListener('mousedown', this._handleOutsideClick);
+  }
+  attributeChangedCallback(n, a, e) {
+    switch (n) {
+      case 'app-state':
+        (this.appState = e), this._setMeta();
+        break;
+      case 'app-state-color':
+        (this.appStateColor = e), this._setMeta();
+        break;
+      case 'app-domain':
+        (this.appDomain = e), this._setMeta();
+        break;
+      case 'app-name':
+        (this.appName = e), this._setMeta();
+        break;
+      case 'app-version':
+        (this.appVersion = e), this._setMeta();
+        break;
+      case 'username':
+        (this.username = e), this._setMeta();
+        break;
+      case 'close-on-select':
+        this.closeOnSelect = this.hasAttribute('close-on-select');
+        break;
+    }
+  }
+}
+window.customElements.define('vanilla-gsb', V);
