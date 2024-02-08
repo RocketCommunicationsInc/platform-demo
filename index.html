@@ -8,16 +8,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@astrouxds/astro-web-components/dist/astro-web-components/astro-web-components.css" />
     <script type="module" src="https://cdn.jsdelivr.net/npm/@astrouxds/astro-web-components/dist/astro-web-components/astro-web-components.esm.js"></script>
+    <script type="module" src="/js/menu.js"></script>
     <link rel="stylesheet" href="/css/style-changes.css" />
   </head>
 
   <body>
-    <rux-global-status-bar app-domain="ACME" app-name="PLATFORM" menu-icon="apps" app-version="v1" app-state="App State" username="User Name" app-state-color="">
+    <vanilla-gsb app-domain="ACME" app-name="PLATFORM" menu-icon="apps" app-version="v1" app-state="App State" username="User Name" app-state-color="">
       <rux-clock></rux-clock>
       <div class="icons spacer" slot="right-side">
         <!-- <rux-monitoring-icon icon="notifications" label="AWEs" status="standby" sublabel="" size="2.5rem" notifications="3"></rux-monitoring-icon> -->
       </div>
-    </rux-global-status-bar>
+    </vanilla-gsb>
     <main>
       <!--Menu html would go here-->
       <section class="content">
