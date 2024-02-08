@@ -102,10 +102,16 @@ main {
       text-align: center;
     }
   }
+  &::part(container) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
   &::part(body) {
     text-align: center;
     color: var(--color-text-secondary);
+    flex-grow: 1;
   }
 
   p {
