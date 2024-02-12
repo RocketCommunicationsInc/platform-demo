@@ -1,7 +1,9 @@
 const cardLinks = [...document.querySelectorAll('a.appLink')];
-console.log(cardLinks);
 //add mousedown listeners
 cardLinks.map((link) => link.addEventListener('click', (e) => windowHandler(e)));
+
+//add window unload listener
+addEventListener('beforeunload', () => saveChildWindows());
 
 //{link, window}
 const openWindows = [];
@@ -10,26 +12,20 @@ function windowHandler(e) {
   e.preventDefault();
   const { target } = e;
   const { href } = target;
-  console.log(href);
 
   //check to see if the window is already open
-  console.log(openWindows);
   const arrayItem = openWindows.find((element) => element.target === target);
   if (arrayItem) {
-    console.log('it does', arrayItem);
     const window = arrayItem.window;
     //if this window exists in array but is closed, update array
     if (window.closed) {
-      console.log('but it was closed');
       const index = openWindows.indexOf(arrayItem);
       if (index > -1) openWindows.splice(index, 1);
       addEntry(target, href);
-      console.log(openWindows);
     } else {
       window.focus();
     }
   } else {
-    console.log("it doesn't");
     addEntry(target, href);
   }
 }
@@ -41,4 +37,14 @@ function addEntry(target, href) {
     window: newWindow,
   };
   openWindows.push(entry);
+}
+
+function saveChildWindows() {
+  //we will save windows in local storage to reopen later
+  openWindows.map((entry) => {
+    //first check if it is still open.. if not, do nothing
+    if (entry.window.closed) return;
+    //else lets get some info
+    console.log(entry.window);
+  });
 }
