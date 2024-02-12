@@ -1,8 +1,8 @@
-vanilla-gsb::part(app-meta) {
+rux-global-status-bar::part(app-meta) {
   width: 30%;
   min-width: 350px;
 }
-vanilla-gsb .spacer {
+rux-global-status-bar .spacer {
   width: calc(30% + 42px);
   min-width: calc(350px + 42px);
 }
@@ -102,6 +102,7 @@ main {
       text-align: center;
     }
   }
+
   &::part(container) {
     height: 100%;
     display: flex;
