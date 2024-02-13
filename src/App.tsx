@@ -1,7 +1,10 @@
 import { RuxCard, RuxClock, RuxGlobalStatusBar, RuxIcon } from '@astrouxds/react';
+import ServiceCard from './components/ServiceCard';
 import './App.css';
+import { appData } from './assets/appsData';
 
 function App() {
+  console.log(appData);
   return (
     <>
       <RuxGlobalStatusBar app-domain='ACME' app-name='PLATFORM' menu-icon='apps' app-version='v1' app-state='App State' username='User Name' app-state-color=''>
@@ -11,20 +14,13 @@ function App() {
       <main>
         <section className='content'>
           <article id='home-content'>
-            <RuxCard className='service-card'>
-              <header slot='header'>
-                <RuxIcon icon='antenna' size='80px' className=''></RuxIcon>
-                <h3>AB</h3>
-              </header>
-              <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
-              </div>
-              <footer slot='footer'>
-                <a href='https://monitor-ttc.netlify.app' target='_blank' className='appLink'>
-                  Open AB
-                </a>
-              </footer>
-            </RuxCard>
+            <ServiceCard
+              title='AB'
+              acronym='AB'
+              description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.'
+              icon='antenna'
+              link='https://monitor-ttc.netlify.app'
+            />
 
             <RuxCard className='service-card'>
               <header slot='header'>
