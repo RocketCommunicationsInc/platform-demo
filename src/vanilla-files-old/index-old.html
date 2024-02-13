@@ -1,0 +1,130 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Astro</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@astrouxds/astro-web-components/dist/astro-web-components/astro-web-components.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@astrouxds/astro-web-components/dist/astro-web-components/astro-web-components.esm.js"></script>
+    <script type="module" src="/js/menu.js"></script>
+    <link rel="stylesheet" href="/css/style-changes.css" />
+  </head>
+
+  <body>
+    <rux-global-status-bar app-domain="ACME" app-name="PLATFORM" menu-icon="apps" app-version="v1" app-state="App State" username="User Name" app-state-color="">
+      <rux-clock></rux-clock>
+      <div class="icons spacer" slot="right-side"></div>
+    </rux-global-status-bar>
+    <main>
+      <!--Menu html would go here-->
+      <section class="content">
+        <article id="home-content">
+          <rux-card class="service-card"
+            ><header slot="header">
+              <rux-icon icon="antenna" size="80px" class=""></rux-icon>
+              <h3>AB</h3>
+            </header>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
+            </div>
+            <footer slot="footer"><a href="https://monitor-ttc.netlify.app" target="_blank" class="appLink">Open AB</a></footer>
+          </rux-card>
+
+          <rux-card class="service-card"
+            ><header slot="header">
+              <rux-icon icon="explore" size="80px" class=""></rux-icon>
+              <h3>FD</h3>
+            </header>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
+            </div>
+            <footer slot="footer"><a href="https://ttc-command-react.netlify.app/" target="_blank" class="appLink">Open FD</a></footer>
+          </rux-card>
+
+          <rux-card class="service-card"
+            ><header slot="header">
+              <rux-icon icon="antenna-transmit" size="80px" class=""></rux-icon>
+              <h3>GC</h3>
+            </header>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
+            </div>
+            <footer slot="footer"><a href="https://grm-dashboard-react.netlify.app/" target="_blank" class="appLink">Open GC</a></footer>
+          </rux-card>
+
+          <rux-card class="service-card"
+            ><header slot="header">
+              <rux-icon icon="assignment" size="80px" class=""></rux-icon>
+              <h3>MM</h3>
+            </header>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
+            </div>
+            <footer slot="footer"><a href="https://grm-equipment-react-ts.netlify.app/" target="_blank" class="appLink">Open MM</a></footer>
+          </rux-card>
+
+          <rux-card class="service-card"
+            ><header slot="header">
+              <rux-icon icon="equipment" size="80px" class=""></rux-icon>
+              <h3>MS</h3>
+            </header>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <footer slot="footer"><a href="https://grm-schedule-react.netlify.app/" target="_blank" class="appLink">Open MS</a></footer>
+          </rux-card>
+
+          <rux-card class="service-card"
+            ><header slot="header">
+              <rux-icon icon="pie-chart" size="80px" class=""></rux-icon>
+              <h3>OD</h3>
+            </header>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
+            </div>
+            <footer slot="footer"><a href="https://flight-dynamics-service.netlify.app" target="_blank" class="appLink">Open OD</a></footer>
+          </rux-card>
+
+          <rux-card class="service-card"
+            ><header slot="header">
+              <rux-icon icon="public" size="80px" class=""></rux-icon>
+              <h3>OP</h3>
+            </header>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
+            </div>
+            <footer slot="footer"><a href="https://flight-dynamics-service.netlify.app" target="_blank" class="appLink">Open OP</a></footer>
+          </rux-card>
+
+          <rux-card class="service-card"
+            ><header slot="header">
+              <rux-icon icon="satellite-transmit" size="80px" class=""></rux-icon>
+              <h3>SCM</h3>
+            </header>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
+            </div>
+            <footer slot="footer"><a href="https://astrouxds.com" target="_blank" class="appLink">Open SCM</a></footer>
+          </rux-card>
+
+          <rux-card class="service-card"
+            ><header slot="header">
+              <rux-icon icon="track-changes" size="80px" class=""></rux-icon>
+              <h3>TC</h3>
+            </header>
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
+            </div>
+            <footer slot="footer"><a href="https://flight-dynamics-service.netlify.app" target="_blank" class="appLink">Open TC</a></footer>
+          </rux-card>
+        </article>
+        <iframe id="frame" name="internal-links" hidden></iframe>
+        <!-- <button onclick="saveChildWindows()">Save Child Windows</button> -->
+      </section>
+    </main>
+  </body>
+</html>
+<script src="/js/windowtracker.js"></script>
+<!-- <script src="/js/collapse.js"></script> -->
