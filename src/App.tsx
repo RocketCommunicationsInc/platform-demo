@@ -1,4 +1,4 @@
-import { RuxCard, RuxClock, RuxGlobalStatusBar, RuxIcon } from '@astrouxds/react';
+import { RuxClock, RuxGlobalStatusBar } from '@astrouxds/react';
 import ServiceCard from './components/ServiceCard';
 import './App.css';
 import { appData } from './assets/appsData';
@@ -14,133 +14,9 @@ function App() {
       <main>
         <section className='content'>
           <article id='home-content'>
-            <ServiceCard
-              title='AB'
-              acronym='AB'
-              description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.'
-              icon='antenna'
-              link='https://monitor-ttc.netlify.app'
-            />
-
-            <RuxCard className='service-card'>
-              <header slot='header'>
-                <RuxIcon icon='explore' size='80px' className=''></RuxIcon>
-                <h3>FD</h3>
-              </header>
-              <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
-              </div>
-              <footer slot='footer'>
-                <a href='https://ttc-command-react.netlify.app/' target='_blank' className='appLink'>
-                  Open FD
-                </a>
-              </footer>
-            </RuxCard>
-
-            <RuxCard className='service-card'>
-              <header slot='header'>
-                <RuxIcon icon='antenna-transmit' size='80px' className=''></RuxIcon>
-                <h3>GC</h3>
-              </header>
-              <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
-              </div>
-              <footer slot='footer'>
-                <a href='https://grm-dashboard-react.netlify.app/' target='_blank' className='appLink'>
-                  Open GC
-                </a>
-              </footer>
-            </RuxCard>
-
-            <RuxCard className='service-card'>
-              <header slot='header'>
-                <RuxIcon icon='assignment' size='80px' className=''></RuxIcon>
-                <h3>MM</h3>
-              </header>
-              <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
-              </div>
-              <footer slot='footer'>
-                <a href='https://grm-equipment-react-ts.netlify.app/' target='_blank' className='appLink'>
-                  Open MM
-                </a>
-              </footer>
-            </RuxCard>
-
-            <RuxCard className='service-card'>
-              <header slot='header'>
-                <RuxIcon icon='equipment' size='80px' className=''></RuxIcon>
-                <h3>MS</h3>
-              </header>
-              <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              </div>
-              <footer slot='footer'>
-                <a href='https://grm-schedule-react.netlify.app/' target='_blank' className='appLink'>
-                  Open MS
-                </a>
-              </footer>
-            </RuxCard>
-
-            <RuxCard className='service-card'>
-              <header slot='header'>
-                <RuxIcon icon='pie-chart' size='80px' className=''></RuxIcon>
-                <h3>OD</h3>
-              </header>
-              <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
-              </div>
-              <footer slot='footer'>
-                <a href='https://flight-dynamics-service.netlify.app' target='_blank' className='appLink'>
-                  Open OD
-                </a>
-              </footer>
-            </RuxCard>
-
-            <RuxCard className='service-card'>
-              <header slot='header'>
-                <RuxIcon icon='public' size='80px' className=''></RuxIcon>
-                <h3>OP</h3>
-              </header>
-              <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
-              </div>
-              <footer slot='footer'>
-                <a href='https://flight-dynamics-service.netlify.app' target='_blank' className='appLink'>
-                  Open OP
-                </a>
-              </footer>
-            </RuxCard>
-
-            <RuxCard className='service-card'>
-              <header slot='header'>
-                <RuxIcon icon='satellite-transmit' size='80px' className=''></RuxIcon>
-                <h3>SCM</h3>
-              </header>
-              <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
-              </div>
-              <footer slot='footer'>
-                <a href='https://astrouxds.com' target='_blank' className='appLink'>
-                  Open SCM
-                </a>
-              </footer>
-            </RuxCard>
-
-            <RuxCard className='service-card'>
-              <header slot='header'>
-                <RuxIcon icon='track-changes' size='80px' className=''></RuxIcon>
-                <h3>TC</h3>
-              </header>
-              <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nostrum rerum praesentium.</p>
-              </div>
-              <footer slot='footer'>
-                <a href='https://flight-dynamics-service.netlify.app' target='_blank' className='appLink'>
-                  Open TC
-                </a>
-              </footer>
-            </RuxCard>
+            {appData.map((app) => (
+              <ServiceCard title={app.title} acronym={app.acronym} description={app.description} icon={app.icon} link={app.link} />
+            ))}
           </article>
         </section>
       </main>
